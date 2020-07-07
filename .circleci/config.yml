@@ -9,13 +9,12 @@ jobs:
   
     - run:
         name: build dependancies
-        command : bundle install
+        command: bundle install
   
     - run:
         name: build the jekyll site
-        command : bundle exec jekyll build
+        command: bundle exec jekyll build
       
     - run:
         name: Print the current time
         command: date
-      
