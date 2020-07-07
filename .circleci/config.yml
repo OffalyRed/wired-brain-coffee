@@ -2,20 +2,20 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci:ruby:2.4.1-node-browsers
+      - image: circleci/ruby:2.4.1-node-browsers
 
 steps:
   - checkout
   
-   - run
+   - run:
       name: build dependancies
       command : bundle install
   
-  - run
+  - run:
       name: build the jekyll site
       command : bundle exec jekyll build
       
-  - run
+  - run:
       name: Print the current time
-      command : date
+      command: date
       
